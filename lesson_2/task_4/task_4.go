@@ -15,6 +15,7 @@ func main() {
 		for j := 2; j < i; j++ {
 			if i%j == 0 {
 				flagNumber = true
+				break
 			}
 		}
 		if !flagNumber {
