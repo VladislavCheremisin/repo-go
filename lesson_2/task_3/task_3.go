@@ -13,5 +13,5 @@ func main() {
 	var numberModul = int(math.Abs(number))
 	fmt.Println("Сотен =", (numberModul / 100))
 	fmt.Println("Десятков =", (numberModul % 100 / 10))
-	fmt.Println("Единиц=", (numberModul % 100 % 10))
+	fmt.Println("Единиц=", (numberModul % 10))
 }
