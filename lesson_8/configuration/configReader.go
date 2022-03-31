@@ -4,10 +4,11 @@ import (
 	"log"
 	"net/url"
 	"os"
+	"strconv"
 )
 
 type Configuration struct {
-	Port         string
+	Port         int
 	Db_url       *url.URL
 	Jaeger_url   *url.URL
 	Sentry_url   *url.URL
@@ -18,6 +19,10 @@ type Configuration struct {
 
 func ConfigReader() interface{} {
 	port := os.Getenv("PORT")
+	port_int, err := strconv.Atoi(port)
+	if err != nil {
+		panic(err)
+	}
 	db_url := os.Getenv("DB_URL")
 	jaeger_url := os.Getenv("JAEGER_URL")
 	sentry_url := os.Getenv("SENTRY_URL")
@@ -30,7 +35,7 @@ func ConfigReader() interface{} {
 	db_url_pars := validatorUrl(db_url)
 
 	validStruct := Configuration{
-		Port:         port,
+		Port:         port_int,
 		Db_url:       db_url_pars,
 		Jaeger_url:   jaeger_url_pars,
 		Sentry_url:   sentry_url_pars,
