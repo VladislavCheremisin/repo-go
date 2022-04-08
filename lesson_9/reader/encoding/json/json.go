@@ -1,8 +1,8 @@
-package configurationReaderJSON
+package json
 
 import (
 	"encoding/json"
-	validationUrl "lesson_9/reader/urlValidator"
+	"lesson_9/reader/validator"
 	"os"
 )
 
@@ -16,8 +16,8 @@ type ConfigurationJson struct {
 	SomeAppKey  string `json:"some_app_key"`
 }
 
-func ConfigReaderJSON() interface{} {
-	data, err := os.ReadFile("configJSON.json")
+func ConfigReaderJson() interface{} {
+	data, err := os.ReadFile("config.json")
 	if err != nil {
 		panic(err)
 	}
@@ -26,9 +26,9 @@ func ConfigReaderJSON() interface{} {
 		panic(err)
 	}
 
-	validationUrl.ValidatorUrl(parsed.Db_url)
-	validationUrl.ValidatorUrl(parsed.Jaeger_url)
-	validationUrl.ValidatorUrl(parsed.Sentry_url)
+	validator.ValidatorURL(parsed.Db_url)
+	validator.ValidatorURL(parsed.Jaeger_url)
+	validator.ValidatorURL(parsed.Sentry_url)
 
 	return parsed
 }

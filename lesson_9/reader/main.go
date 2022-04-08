@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	configurationReaderJSON "lesson_9/reader/configurationJSON"
-	configurationReaderYAML "lesson_9/reader/configurationYAML"
+	"lesson_9/reader/encoding/json"
+	"lesson_9/reader/encoding/yaml"
 )
 
 func main() {
-	fmt.Printf("%+v\n", configurationReaderJSON.ConfigReaderJSON())
-	fmt.Printf("%+v\n", configurationReaderYAML.ConfigReaderYAML())
+	fmt.Printf("%+v\n", json.ConfigReaderJson())
+	fmt.Printf("%+v\n", yaml.ConfigReaderYaml())
 }

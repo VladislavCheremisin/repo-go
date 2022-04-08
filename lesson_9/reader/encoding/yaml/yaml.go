@@ -1,7 +1,7 @@
-package configurationReaderYAML
+package yaml
 
 import (
-	validationUrl "lesson_9/reader/urlValidator"
+	"lesson_9/reader/validator"
 	"lesson_9/src/gopkg.in/yaml.v2"
 	"os"
 )
@@ -16,8 +16,8 @@ type ConfigurationYaml struct {
 	SomeAppKey  string `yaml:"some_app_key"`
 }
 
-func ConfigReaderYAML() interface{} {
-	data, err := os.ReadFile("configYAML.yaml")
+func ConfigReaderYaml() interface{} {
+	data, err := os.ReadFile("config.yaml")
 	if err != nil {
 		panic(err)
 	}
@@ -26,9 +26,9 @@ func ConfigReaderYAML() interface{} {
 		panic(err)
 	}
 
-	validationUrl.ValidatorUrl(parsed.DbURL)
-	validationUrl.ValidatorUrl(parsed.JaegerURL)
-	validationUrl.ValidatorUrl(parsed.SentryURL)
+	validator.ValidatorURL(parsed.DbURL)
+	validator.ValidatorURL(parsed.JaegerURL)
+	validator.ValidatorURL(parsed.SentryURL)
 
 	return parsed
 }
