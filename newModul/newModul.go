@@ -1,5 +1,5 @@
-package main
+package newModul
 
-func main() {
-	//test
+func newModul() {
+	println("777")
 }
