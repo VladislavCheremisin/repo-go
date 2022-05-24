@@ -1,0 +1,5 @@
+package newModule
+
+func newModule() {
+
+}
