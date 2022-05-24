@@ -1,4 +1,4 @@
-package newModule
+package newModul
 
 import _ "github.com/gorilla/websocket"
 
