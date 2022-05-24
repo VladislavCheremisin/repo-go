@@ -1,5 +1,5 @@
-package newModule
+package moduleWithoutTags
 
-func newModule() {
+func moduleWithoutTags() {
 
 }
