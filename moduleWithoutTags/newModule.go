@@ -1,5 +1,0 @@
-package moduleWithoutTags
-
-func moduleWithoutTags() {
-
-}

@@ -1,0 +1,5 @@
+package moduleWithoutTags
+
+func moduleWithoutTagsTest() {
+
+}
