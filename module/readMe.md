@@ -16,26 +16,28 @@ go: found github.com/valyala/fasthttp in github.com/valyala/fasthttp v1.37.0
 6. Выполняем go mod tidy чтобы проинициализировать  "github.com/gorilla/websocket"
 go: finding module for package github.com/gorilla/websocket
 go: found github.com/gorilla/websocket in github.com/gorilla/websocket v1.5.0
-5. Удаляем  github.com/valyala/fasthttp v1.37.0
-6. Делаем go mod tidy, чтобы почистить после удаления
-7. Делаем go mod download 
-8. Делаем go mod vendor , появился каталог vendor
-9. Делаем go build -mod=vendor
-10. Добавляем в репо git commit -a -m 'initial commit.'
-11. Делаем git push не прошел пушь через консоль (так как не настраивал его для работы через консоль) сделал через ГитКракен
-12. Добавил таг через Гит Кракен v0.0.1
-13. Добавил папку v2 в проект
-14. Проинициализировал директорию go mod init github.com/VladislavCheremisin/repo-go/module/v2
+7. Удаляем  github.com/valyala/fasthttp v1.37.0
+8. Делаем go mod tidy, чтобы почистить после удаления
+9. Делаем go mod download 
+10. Делаем go mod vendor , появился каталог vendor
+11. Делаем go build -mod=vendor
+12. Добавляем в репо git commit -a -m 'initial commit.'
+13. Делаем git push не прошел пушь через консоль (так как не настраивал его для работы через консоль) сделал через ГитКракен
+14. Добавил таг через Гит Кракен v0.0.1
+15. Добавил папку v2 в проект
+16. Проинициализировал директорию go mod init github.com/VladislavCheremisin/repo-go/module/v2
 Создался файл go.mod
-15. Добавил main.go в v2
-16. Добавил в файл строку _ "github.com/valyala/fasthttp"
-17. Сделал go mod tidy
+17. Добавил main.go в v2
+18. Добавил в файл строку _ "github.com/valyala/fasthttp"
+19. Сделал go mod tidy
 go: finding module for package github.com/gorilla/websocket
 go: finding module for package github.com/valyala/fasthttp
 go: found github.com/gorilla/websocket in github.com/gorilla/websocket v1.5.0
 go: found github.com/valyala/fasthttp in github.com/valyala/fasthttp v1.37.0
-18. Сделал комит и запушил
-19. Добавил таг v2.0.0 и запушил таг
-20. Попробовал добавить этот модуль в другой проект
-
+20. Сделал комит и запушил
+21. Добавил таг v2.0.0 и запушил таг
+22. Попробовал добавить этот модуль в другой проект
+23. Проделал много танцев с бубном, ну очень много, в результате удалил теги и переделал модули много раз так как у меня не получалось импортировать 
+созданные модули в новый проет, но в результате сделал отдельно на main ветке и всё получилось, видимо в следствии того что модуль находится 
+в состоянии пул реквест были проблемы. Не буду расписывать все свои шаги, но поверьте их было много и они были крайне разнообразными)
 
